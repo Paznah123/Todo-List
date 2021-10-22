@@ -6,6 +6,8 @@ const date = require(__dirname + "/date.js");
 
 const app = express();
 
+let port = process.env.PORT || 3000;
+
 const url = "mongodb+srv://paznah123:p0cketk1ng@fruitsdb.s3c6u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 let workItems = [];
@@ -120,6 +122,6 @@ app.post('/delete', (req, res) => {
     }
 });
 
-app.listen(3000, () => {{}
-    console.log("server running on port 3000");
+app.listen(port, () => {{}
+    console.log("Server started successfuly on port: " + port);
 });
